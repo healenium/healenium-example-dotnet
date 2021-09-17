@@ -1,0 +1,96 @@
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.api.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.core.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\testcentric.engine.metadata.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenium.Selenium.Tests.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenium.Selenium.Tests.pdb
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenuim.Selenium.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.framework.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenuim.Selenium.pdb
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.pdb
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.framework.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.AssemblyReference.cache
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.CoreCompileInputs.cache
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.CopyComplete
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.pdb
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.Support.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.Support.xml
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Healenium\net testing\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.api.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.core.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\testcentric.engine.metadata.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenium.Selenium.Tests.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenium.Selenium.Tests.pdb
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenuim.Selenium.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.framework.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.Support.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Healenuim.Selenium.pdb
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.pdb
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\nunit.framework.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.Support.xml
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.AssemblyReference.cache
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.CoreCompileInputs.cache
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.CopyComplete
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.dll
+C:\Healenium\Repository\healenium-example-dotnet\Healenuim.NET\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.pdb
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\NUnit3.TestAdapter.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.api.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\nunit.engine.core.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\testcentric.engine.metadata.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Healenium.Selenium.Tests.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Healenium.Selenium.Tests.pdb
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Healenuim.Selenium.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\nunit.framework.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.Support.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Healenuim.Selenium.pdb
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.pdb
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\App.Metrics.Abstractions.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\nunit.framework.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\bin\Debug\WebDriver.Support.xml
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.AssemblyReference.cache
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.CoreCompileInputs.cache
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.csproj.CopyComplete
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.dll
+C:\Healenium\Repository\healenium-example-dotnet\tests\Healenium.Selenium.Tests\obj\Debug\Healenium.Selenium.Tests.pdb

@@ -1,0 +1,875 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReportPortal.Client</name>
+    </assembly>
+    <members>
+        <member name="T:ReportPortal.Client.Abstractions.IClientService">
+            <summary>
+            Interface to interact with common Report Portal services. Provides possibility to manage almost of service's endpoints.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Models.LaunchMode">
+            <summary>
+            Describes modes for launches.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Models.LogLevel">
+            <summary>
+            Describes levels for log items.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Models.Status">
+            <summary>
+            Describes statuses of tests items.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Models.TestItemType">
+            <summary>
+            Describes types of test items.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.AnalyzeLaunchRequest">
+            <summary>
+            Defines a request to analyze launch.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.AssignTestItemIssuesRequest">
+            <summary>
+            Defines a request for assigning issues to test items.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.AssignTestItemIssuesRequest.Issues">
+            <summary>
+            List of test items and their issues.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.TestItemIssueUpdate.Issue">
+            <summary>
+            A issue of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.TestItemIssueUpdate.TestItemId">
+            <summary>
+            ID of test item to assign the issue.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest">
+            <summary>
+            Defines a request for logging messages into Report Portal.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest.TestItemUuid">
+            <summary>
+            ID of test item to add new logs.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest.LaunchUuid">
+            <summary>
+            Log item belongs to launch instead of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest.TimeString">
+            <summary>
+            Date time of log item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest.LevelString">
+            <summary>
+            A level of log item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest.Text">
+            <summary>
+            Message of log item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest.Attach">
+            <summary>
+            Specify an attachment of log item.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest">
+            <summary>
+            Defines a request for creating of user filters
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.Name">
+            <summary>
+            Name of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.Description">
+            <summary>
+            Description of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.Conditions">
+            <summary>
+            List of conditions to filter data.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.Orders">
+            <summary>
+            list of parameters of selection
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.IsShared">
+            <summary>
+            is filter shared
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.TypeStr">
+            <summary>
+            filter type
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest.UserFilterType">
+            <summary>
+            user filter type enum
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.FinishLaunchRequest">
+            <summary>
+            Defines a request to finish execution of specified launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishLaunchRequest.EndTimeString">
+            <summary>
+            Date time when launch execution is finished.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest">
+            <summary>
+            Defines a request to finish specified test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.Description">
+            <summary>
+            A long description of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.EndTimeString">
+            <summary>
+            Date time when test item is finished.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.StatusString">
+            <summary>
+            A result of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.Issue">
+            <summary>
+            A issue of test item if execution was proceeded with error.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.Tags">
+            <summary>
+            A list of tags.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.Attributes">
+            <summary>
+            Sets attributes when finishing test item.
+            </summary>
+            <value>List of attributes.</value>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.IsRetry">
+            <summary>
+            Retry status indicator.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest.RetryOf">
+            <summary>
+            Test Item to be marked as retry.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest">
+            <summary>
+            Defines a content of request for service to create new launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.Name">
+            <summary>
+            A short name of launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.Description">
+            <summary>
+            Description of launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.ModeString">
+            <summary>
+            Specify whether the launch is executed under debugging.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.StartTimeString">
+            <summary>
+            Date time when the launch is executed.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.EndTimeString">
+            <summary>
+            Date time when the launch is finished.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.Tags">
+            <summary>
+            Tags for merged launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.Launches">
+            <summary>
+            Tags for merged launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest.MergeType">
+            <summary>
+            Type of launches merge.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest">
+            <summary>
+            Defines a content of request for service to create new launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.Name">
+            <summary>
+            A short name of launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.Description">
+            <summary>
+            Description of launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.Mode">
+            <summary>
+            Specify whether the launch is executed under debugging.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.StartTime">
+            <summary>
+            Date time when the launch is executed.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.Tags">
+            <summary>
+            Mark the launch with tags.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.IsRerun">
+            <summary>
+            Don't start new launch and use some existing.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.RerunOfLaunchUuid">
+            <summary>
+            Don't start new launch and use some existing with specific launch UUID.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.Attributes">
+            <summary>
+            Launch attributes.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartLaunchRequest.Uuid">
+            <summary>
+            Set specific launch UUID.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest">
+            <summary>
+            Defines a content of request for service to create new test item in progress state.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.LaunchUuid">
+            <summary>
+            ID of parent launch to create new test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.Name">
+            <summary>
+            A short name of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.Description">
+            <summary>
+            A long description of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.StartTime">
+            <summary>
+            Date time when new test item is created.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.Type">
+            <summary>
+            A type of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.Tags">
+            <summary>
+            A list of tags.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.IsRetry">
+            <summary>
+            Retry status indicator.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.RetryOf">
+            <summary>
+            Test Item to be marked as retry.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.Parameters">
+            <summary>
+            A list of parameters.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.UniqueId">
+            <summary>
+            A test item unique id.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.TestCaseId">
+            <summary>
+            Test Case ID.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.CodeReference">
+            <summary>
+            Code reference for test. Example: namespace + classname + methodname
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.HasStats">
+            <summary>
+            Define if test item has stats. If false - considered as nested step.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.StartTestItemRequest.Attributes">
+            <summary>
+            Test item attributes.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.UpdateLaunchRequest">
+            <summary>
+            Defines a request to finish specified launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateLaunchRequest.Tags">
+            <summary>
+            Update tags for launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateLaunchRequest.Attributes">
+            <summary>
+            Update attributes for launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateLaunchRequest.Description">
+            <summary>
+            Description of launch.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateLaunchRequest.Mode">
+            <summary>
+            Specify whether the launch is executed under debugging.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.UpdateTestItemRequest">
+            <summary>
+            Defines a request to finish specified test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateTestItemRequest.Tags">
+            <summary>
+            Update tags for test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateTestItemRequest.Attributes">
+            <summary>
+            Update attributes for test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateTestItemRequest.Description">
+            <summary>
+            Description of test item.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateTestItemRequest.Status">
+            <summary>
+            New status for test item.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest">
+            <summary>
+            Defines a request for updating of user filters
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.Name">
+            <summary>
+            Name of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.Description">
+            <summary>
+            Description of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.Conditions">
+            <summary>
+            List of conditions to filter data.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.Orders">
+            <summary>
+            List of parameters of selection.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.IsShared">
+            <summary>
+            Is filter shared.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.TypeStr">
+            <summary>
+            Filter type.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest.UserFilterType">
+            <summary>
+            User filter type enum.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Resources.ILaunchResource">
+            <summary>
+            Interacts with launches.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.AnalyzeAsync(ReportPortal.Client.Abstractions.Requests.AnalyzeLaunchRequest)">
+            <summary>
+            Analyzes launches.
+            </summary>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.FinishAsync(System.String,ReportPortal.Client.Abstractions.Requests.FinishLaunchRequest)">
+            <summary>
+            Finishes specified launch.
+            </summary>
+            <param name="uuid">UUID of specified launch.</param>
+            <param name="request">Information about representation of launch to finish.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes specified launch.
+            </summary>
+            <param name="id">ID of the launch to delete.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.GetAsync(System.Int64)">
+            <summary>
+            Returns specified launch by ID.
+            </summary>
+            <param name="id">ID of the launch to retrieve.</param>
+            <returns>A representation of launch.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.GetAsync(System.String)">
+            <summary>
+            Returns specified launch by UUID.
+            </summary>
+            <param name="uuid">UUID of the launch to retrieve.</param>
+            <returns>A representation of launch.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.GetAsync(ReportPortal.Client.Abstractions.Filtering.FilterOption)">
+            <summary>
+            Returns a list of launches for current project.
+            </summary>
+            <param name="filterOption">Specified criterias for retrieving launches.</param>
+            <returns>A list of launches.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.GetDebugAsync(ReportPortal.Client.Abstractions.Filtering.FilterOption)">
+            <summary>
+            Returns a list of debug launches for current project.
+            </summary>
+            <param name="filterOption">Specified criterias for retrieving launches.</param>
+            <returns>A list of launches.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.MergeAsync(ReportPortal.Client.Abstractions.Requests.MergeLaunchesRequest)">
+            <summary>
+            Merge several launches.
+            </summary>
+            <param name="request">Request for merging.</param>
+            <returns>Returns the model of merged launches.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.StartAsync(ReportPortal.Client.Abstractions.Requests.StartLaunchRequest)">
+            <summary>
+            Starts new launch.
+            </summary>
+            <param name="request">Information about launch.</param>
+            <returns>Information about started launch.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.StopAsync(System.Int64,ReportPortal.Client.Abstractions.Requests.FinishLaunchRequest)">
+            <summary>
+            Stopes specified launch even if inner tests are not finished yet.
+            </summary>
+            <param name="id">ID of specified launch.</param>
+            <param name="request">Information about representation of launch to finish.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILaunchResource.UpdateAsync(System.Int64,ReportPortal.Client.Abstractions.Requests.UpdateLaunchRequest)">
+            <summary>
+            Update specified launch.
+            </summary>
+            <param name="id">ID of launch to update.</param>
+            <param name="request">Information about launch.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Resources.ILogItemResource">
+            <summary>
+            Interacts with log items.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.CreateAsync(ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest)">
+            <summary>
+            Creates a new log item.
+            </summary>
+            <param name="request">Information about representation of log item.</param>
+            <returns>Representation of just created log item.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.CreateAsync(ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest[])">
+            <summary>
+            Creates a new log item.
+            </summary>
+            <param name="requests">Information about representation of log item.</param>
+            <returns>Representation of just created log item.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes specified log item.
+            </summary>
+            <param name="id">ID of the log item to delete.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.GetBinaryDataAsync(System.String)">
+            <summary>
+            Returns binary data of attached file to log message.
+            </summary>
+            <param name="id">ID of data.</param>
+            <returns>Array of bytes.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.GetAsync(System.Int64)">
+            <summary>
+            Returns specified log item by ID.
+            </summary>
+            <param name="id">ID of the log item to retrieve.</param>
+            <returns>A representation of log item/</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.GetAsync(System.String)">
+            <summary>
+            Returns specified log item by UUID.
+            </summary>
+            <param name="uuid">UUID of the log item to retrieve.</param>
+            <returns>A representation of log item/</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ILogItemResource.GetAsync(ReportPortal.Client.Abstractions.Filtering.FilterOption)">
+            <summary>
+            Returns a list of log items for specified test item.
+            </summary>
+            <param name="filterOption">Specified criterias for retrieving log items.</param>
+            <returns>A list of log items.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IProjectResource.UpdatePreferencesAsync(System.String,System.String,System.Int64)">
+            <summary>
+            Updates the project preference for user.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IProjectResource.GetAllPreferences(System.String,System.String)">
+            <summary>
+            Gets all user preferences.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Resources.ITestItemResource">
+            <summary>
+            Interacts with test items.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.AssignIssuesAsync(ReportPortal.Client.Abstractions.Requests.AssignTestItemIssuesRequest)">
+            <summary>
+            Assign issues to specified test items.
+            </summary>
+            <param name="request">Information about test items and their issues.</param>
+            <returns>A list of assigned issues.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes specified test item.
+            </summary>
+            <param name="id">ID of the test item to delete.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.FinishAsync(System.String,ReportPortal.Client.Abstractions.Requests.FinishTestItemRequest)">
+            <summary>
+            Finishes specified test item.
+            </summary>
+            <param name="uuid">ID of specified test item.</param>
+            <param name="request">Information about representation of test item to finish.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.GetAsync(System.Int64)">
+            <summary>
+            Returns specified test item by ID.
+            </summary>
+            <param name="id">ID of the test item to retrieve.</param>
+            <returns>A representation of test item.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.GetAsync(System.String)">
+            <summary>
+            Returns specified test item by UUID.
+            </summary>
+            <param name="uuid">UUID of the test item to retrieve.</param>
+            <returns>A representation of test item.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.GetHistoryAsync(System.Int64,System.Int32)">
+            <summary>
+            Get the history of test items executions.
+            </summary>
+            <param name="id">ID of test item.</param>
+            <param name="depth">How many executions to return.</param>
+            <returns>The list of execution history.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.GetAsync(ReportPortal.Client.Abstractions.Filtering.FilterOption)">
+            <summary>
+            Returns a list of test items for specified launch and parent test item (optional).
+            </summary>
+            <param name="filterOption">Specified criterias for retrieving test items.</param>
+            <returns>A list of test items.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.StartAsync(ReportPortal.Client.Abstractions.Requests.StartTestItemRequest)">
+            <summary>
+            Creates a new test item.
+            </summary>
+            <param name="request">Information about representation of test item.</param>
+            <returns>Representation of created test item.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.StartAsync(System.String,ReportPortal.Client.Abstractions.Requests.StartTestItemRequest)">
+            <summary>
+            Creates a new test item.
+            </summary>
+            <param name="uuid">UUID of parent item.</param>
+            <param name="model">Information about representation of test item.</param>
+            <returns>Representation of created test item.</returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.ITestItemResource.UpdateAsync(System.Int64,ReportPortal.Client.Abstractions.Requests.UpdateTestItemRequest)">
+            <summary>
+            Update specified test item.
+            </summary>
+            <param name="id">ID of test item to update.</param>
+            <param name="request">Information about test item.</param>
+            <returns>A message from service.</returns>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Resources.IUserFilterResource">
+            <summary>
+            Interacts with user filters.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IUserFilterResource.CreateAsync(ReportPortal.Client.Abstractions.Requests.CreateUserFilterRequest)">
+            <summary>
+            Creates the specified user filter.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IUserFilterResource.UpdateAsync(System.Int64,ReportPortal.Client.Abstractions.Requests.UpdateUserFilterRequest)">
+            <summary>
+            Updates the specified user filter.
+            </summary>
+            <param name="id">ID of filter to update.</param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IUserFilterResource.GetAsync(ReportPortal.Client.Abstractions.Filtering.FilterOption)">
+            <summary>
+            Gets all user filters.
+            </summary>
+            <param name="filterOption"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IUserFilterResource.GetAsync(System.Int64)">
+            <summary>
+            Gets user filter by id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IUserFilterResource.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes the specified filter by id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ReportPortal.Client.Abstractions.Resources.IUserResource">
+            <summary>
+            Interacts with current user.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.Abstractions.Resources.IUserResource.GetAsync">
+            <summary>
+            Gets the current user's information.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.PreferenceResponse.Filters">
+            <summary>
+            List of filters in a preference.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.TestItemResponse.CodeReference">
+            <summary>
+            Code reference for test. Example: namespace + classname + methodname
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.TestItemResponse.Attributes">
+            <summary>
+            Test item attributes.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterCreatedResponse.Id">
+            <summary>
+            ID of created user filter
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.Id">
+            <summary>
+            ID of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.Description">
+            <summary>
+            Description of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.Conditions">
+            <summary>
+            List of conditions to filter data.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.Name">
+            <summary>
+            Name of user filter.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.Orders">
+            <summary>
+            list of parameters of selection
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.IsShared">
+            <summary>
+            is filter shared
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.TypeString">
+            <summary>
+            filter type
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.UserFilterType">
+            <summary>
+            user filter type enum
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.UserFilterResponse.Owner">
+            <summary>
+            owner of user filter
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.Condition.ConditionString">
+            <summary>
+            Condition to filter with.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.Condition.FilteringField">
+            <summary>
+            Field to filter by.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.Condition.Value">
+            <summary>
+            value to filter by
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.FilterOrder.Asc">
+            <summary>
+            Is ascendant order.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Abstractions.Responses.FilterOrder.SortingColumn">
+            <summary>
+            A column to sort by.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.IHttpClientFactory">
+            <summary>
+            A factory abstraction that can create instances of <see cref="T:System.Net.Http.HttpClient" /> when required.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.IHttpClientFactory.Create">
+            <summary>
+            Creates new instance of <see cref="T:System.Net.Http.HttpClient" />.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Client.ReportPortalException">
+            <summary>
+            Occurs when server cannot process a request.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Client.ReportPortalException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of <see cref="T:ReportPortal.Client.ReportPortalException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">Reference to other error.</param>
+        </member>
+        <member name="T:ReportPortal.Client.Service">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Client.Service.#ctor(System.Uri,System.String,System.String,ReportPortal.Client.IHttpClientFactory)">
+            <summary>
+            Constructor to initialize a new object of service.
+            </summary>
+            <param name="uri">Base URI for REST service.</param>
+            <param name="projectName">A project to manage.</param>
+            <param name="token">A token for user. Can be UID given from user's profile page.</param>
+            <param name="httpClientFactory">Factory object to create an instance of <see cref="T:System.Net.Http.HttpClient"/>.</param>
+        </member>
+        <member name="P:ReportPortal.Client.Service.ProjectName">
+            <summary>
+            Get or set project name to interact with.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Client.Service.Launch">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Client.Service.TestItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Client.Service.LogItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Client.Service.User">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Client.Service.UserFilter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Client.Service.Project">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

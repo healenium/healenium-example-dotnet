@@ -1,0 +1,1144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReportPortal.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:ReportPortal.Shared.Configuration.Configuration">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Creates new instance of <see cref="T:ReportPortal.Shared.Configuration.Configuration"/> class and provide a way to retrieve properties.
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="P:ReportPortal.Shared.Configuration.Configuration.Properties">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.GetValue``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.GetValue``1(System.String,``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.GetValues``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.GetValues``1(System.String,System.Collections.Generic.IEnumerable{``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.GetKeyValues``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Configuration.GetKeyValues``1(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,``0}})">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.ConfigurationBuilder">
+            <inheritdoc />
+        </member>
+        <member name="P:ReportPortal.Shared.Configuration.ConfigurationBuilder.Providers">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.ConfigurationBuilder.Add(ReportPortal.Shared.Configuration.IConfigurationProvider)">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.ConfigurationBuilder.Build">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.ConfigurationPath">
+            <summary>
+            Stores well known configuration property names.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.IConfiguration">
+            <summary>
+            Stores configuration variables from different providers.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Configuration.IConfiguration.Properties">
+            <summary>
+            Fetched configuration variables.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfiguration.GetValue``1(System.String)">
+            <summary>
+            Returns value of configuration property.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="property"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfiguration.GetValue``1(System.String,``0)">
+            <summary>
+            Returns value of configuration property.
+            </summary>
+            <param name="property"></param>
+            <param name="defaultValue"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfiguration.GetValues``1(System.String)">
+            <summary>
+            Returns values of configuration property.
+            </summary>
+            <param name="property"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfiguration.GetValues``1(System.String,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Returns values of configuration property.
+            </summary>
+            <param name="property"></param>
+            <param name="defaultValue"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfiguration.GetKeyValues``1(System.String)">
+            <summary>
+            Returns pairs of key:value of configuration property.
+            </summary>
+            <param name="property"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfiguration.GetKeyValues``1(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,``0}})">
+            <summary>
+            Returns pairs of key:value of configuration property.
+            </summary>
+            <param name="property"></param>
+            <param name="defaultValue"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.IConfigurationBuilder">
+            <summary>
+            Builds <see cref="T:ReportPortal.Shared.Configuration.IConfiguration"/> instance to retrieve configuration variables from different providers.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Configuration.IConfigurationBuilder.Providers">
+            <summary>
+            Gets registered providers.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfigurationBuilder.Add(ReportPortal.Shared.Configuration.IConfigurationProvider)">
+            <summary>
+            Register provider to be considered as configuration source.
+            </summary>
+            <param name="provider"></param>
+            <returns>The same <see cref="T:ReportPortal.Shared.Configuration.IConfigurationBuilder"/> instance.</returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfigurationBuilder.Build">
+            <summary>
+            Asks all registered providers to fetch configuration variables from a source.
+            </summary>
+            <returns>Configuration instance with fethed configuration variables.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.IConfigurationProvider">
+            <summary>
+            Provides a way to retrieve configuration variables.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.IConfigurationProvider.Load">
+            <summary>
+            Fethes configuration variables as dictionary.
+            </summary>
+            <returns>Dictionary where key is property name and value is property value.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.Providers.DirectoryProbingConfigurationProvider">
+            <summary>
+            Finds files in a directory and consider their content as a value for configuration properties.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Providers.DirectoryProbingConfigurationProvider.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates new instance of <see cref="T:ReportPortal.Shared.Configuration.Providers.DirectoryProbingConfigurationProvider"/> class.
+            </summary>
+            <param name="directoryPath">Path to a directory where to find files.</param>
+            <param name="prefix">Limit files searching.</param>
+            <param name="delimeter">Consider this string as hierarchic property.</param>
+            <param name="optional">Returns empty list of properties if directory doesn't exist.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Providers.DirectoryProbingConfigurationProvider.Load">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.Providers.EnvironmentVariablesConfigurationProvider">
+            <summary>
+            Retrieves environment variables as configuration properties.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Providers.EnvironmentVariablesConfigurationProvider.#ctor(System.String,System.String,System.EnvironmentVariableTarget)">
+            <summary>
+            Creates new instance of <see cref="T:ReportPortal.Shared.Configuration.Providers.EnvironmentVariablesConfigurationProvider"/> class.
+            </summary>
+            <param name="prefix">Only use environment variables which starts from spicific prefix.</param>
+            <param name="delimeter">Property is considered as hierarchical if its name contains specific character.</param>
+            <param name="target">Environment variables scope, like machine scoped or process scoped.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Providers.EnvironmentVariablesConfigurationProvider.Load">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Configuration.Providers.JsonFileConfigurationProvider">
+            <summary>
+            Parse json file with configuration properties as flatten dictionary.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Providers.JsonFileConfigurationProvider.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates new instance of <see cref="T:ReportPortal.Shared.Configuration.Providers.JsonFileConfigurationProvider" /> class.
+            </summary>
+            <param name="delimeter">Char which represents hierarchy of flatten properties.</param>
+            <param name="filePath">The path to json file.</param>
+            <param name="optional">If file doesn't exist then empty disctionary will be returns.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Configuration.Providers.JsonFileConfigurationProvider.Load">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Context">
+            <summary>
+            Provides an access to work with reporting context.
+            Using it you are able to add log messages, amend curent test metainfo.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Context.Current">
+            <summary>
+            Returns context to amend current test metadata or add log messages.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Context.Launch">
+            <summary>
+            Returns context to amend current launch metadata or add log messages.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Converters.ItemAttributeConverter">
+            <summary>
+            Converter of any string to <see cref="T:ReportPortal.Client.Abstractions.Models.ItemAttribute"/> instance.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Converters.ItemAttributeConverter.ConvertFrom(System.String,System.Action{ReportPortal.Shared.Converters.ItemAttributeConverter.ConvertOptions})">
+            <summary>
+            Translate string to ItemAttribute
+            
+            component:search =>     key=component, value=search
+            :search                 key=, value=search
+            search:                 key=, value=search
+            
+            Attribute value always should not be empty.
+            </summary>
+            <param name="tag"></param>
+            <param name="optionsProvider"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Converters.ItemAttributeConverter.ConvertOptions">
+            <summary>
+            Defines options for <see cref="T:ReportPortal.Shared.Converters.ItemAttributeConverter"/>.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Converters.ItemAttributeConverter.ConvertOptions.UndefinedKey">
+            <summary>
+            Key if it was not parsed.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Converters.ItemAttributeConverter.ConvertOptions.Default">
+            <summary>
+            Returns default converter options.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.ILogContext">
+            <summary>
+            Provides api to send contextual log messages or log scopes.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.ILogContext.Log">
+            <summary>
+            Current contextual <see href="ILogScope"/>
+            </summary>
+            <value>Instance of <see href="ILogScope"/></value>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.ITestContext">
+            <summary>
+            Context to amend current test metadata or add log messages.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.ITestContext.Metadata">
+            <summary>
+            Commands emitter to modify metadata of test on fly.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.ITestMetadataEmitter">
+            <summary>
+            Commands emitter to modify metadata of test on fly.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.ITestMetadataEmitter.Attributes">
+            <summary>
+            Collection of test meta attributes.
+            </summary>
+            <value>Returns a current collection of attributes.</value>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.LaunchContext.Log">
+            <summary>
+            Returns current active LogScope which provides methods for logging.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.Logging.ILogMessage">
+            <summary>
+            Represents message for logging.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogMessage.Message">
+            <summary>
+            Textual log event message.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogMessage.Time">
+            <summary>
+            Time representation when log event occurs.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogMessage.Level">
+            <summary>
+            Level of log event.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogMessage.Attachment">
+            <summary>
+            Binary data attached to log event.
+            Null if log event is without attachment.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.Logging.ILogMessageAttachment">
+            <summary>
+            Represents binary attachment for log events.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogMessageAttachment.MimeType">
+            <summary>
+            Type of attachment like image/png.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogMessageAttachment.Data">
+            <summary>
+            Binary data of the attachment.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.Logging.ILogScope">
+            <summary>
+            Sends log messages to active logging scope.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.Id">
+            <summary>
+            Unique ID of current logging scope.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.Parent">
+            <summary>
+            Parent logging scope.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.Root">
+            <summary>
+            Root logging scope.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.Context">
+            <summary>
+            Context which current logging scope belong to.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.Name">
+            <summary>
+            Logical login scope name.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.BeginTime">
+            <summary>
+            Time when loging scope began.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.EndTime">
+            <summary>
+            Time when logging scope ended.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.ILogScope.Status">
+            <summary>
+            Logging scope status.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.BeginScope(System.String)">
+            <summary>
+            Starts new logging scope beginning from active scope.
+            </summary>
+            <param name="name">A name of the scope.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Message(ReportPortal.Shared.Execution.Logging.ILogMessage)">
+            <summary>
+            Sends log message to current test context.
+            </summary>
+            <param name="log">Full model object for message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Info(System.String)">
+            <summary>
+            Sends log message with "Info" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Info(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Debug(System.String)">
+            <summary>
+            Sends log message with "Debug" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Debug(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Trace(System.String)">
+            <summary>
+            Sends log message with "Trace" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Trace(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Error(System.String)">
+            <summary>
+            Sends log message with "Error" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Error(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Fatal(System.String)">
+            <summary>
+            Sends log message with "Fatal" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Fatal(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Warn(System.String)">
+            <summary>
+            Sends log message with "Warn" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.ILogScope.Warn(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.Logging.LogMessage">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.LogMessage.#ctor(System.String)">
+            <summary>
+            Creates new instance of <see href="LogMessage"/> 
+            </summary>
+            <param name="message">Textual log event message.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.LogMessage.Message">
+            <inheritdoc />
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.LogMessage.Time">
+            <inheritdoc />
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.LogMessage.Level">
+            <inheritdoc />
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.LogMessage.Attachment">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.Logging.LogMessageAttachment">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Execution.Logging.LogMessageAttachment.#ctor(System.String,System.Byte[])">
+            <summary>
+            Creates new instance of <see href="LogMessageAttachment"/> class.
+            </summary>
+            <param name="mimeType">Type of attachment like image/png.</param>
+            <param name="data">Binary data of the attachment.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.LogMessageAttachment.MimeType">
+            <inheritdoc />
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.Logging.LogMessageAttachment.Data">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Execution.Logging.LogScopeStatus">
+            <summary>
+            Status of logging scope.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Execution.TestContext.Log">
+            <summary>
+            Returns current active LogScope which provides methods for logging.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Extensibility.Analytics.AnalyticsReportEventsObserver">
+            <summary>
+            Google Analytics launch events tracker.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Extensibility.Analytics.AnalyticsReportEventsObserver.DefineConsumer(System.String,System.String)">
+            <summary>
+            Sets custom information about agent name and version. It's expected this method is invoked on agent side.
+            </summary>
+            <param name="agentName">Human readable name of the agent.</param>
+            <param name="agentVersion">Automatically identified as calling assembly version if null.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Extensibility.Analytics.AnalyticsReportEventsObserver.Initialize(ReportPortal.Shared.Extensibility.ReportEvents.IReportEventsSource)">
+            <inheritdoc />
+        </member>
+        <member name="M:ReportPortal.Shared.Extensibility.Analytics.AnalyticsReportEventsObserver.Dispose">
+            <summary>
+            Release HtpClient if needed.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Extensibility.ILogFormatter">
+            <summary>
+            Extensibility point to bring ability to modify log message produced by tests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Extensibility.ILogFormatter.Order">
+            <summary>
+            Order of the formatter in chain of registered log message formatters.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Extensibility.ILogFormatter.FormatLog(ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest)">
+            <summary>
+            Modify log message before sending it to the server.
+            </summary>
+            <param name="logRequest">Log message to format</param>
+            <returns>Specify whether log message is formatted and should not be sent up to formatters chain.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Extensibility.LogFormatter.Base64LogFormatter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Extensibility.LogFormatter.Base64LogFormatter.Order">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Extensibility.LogFormatter.Base64LogFormatter.FormatLog(ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Extensibility.LogFormatter.FileLogFormatter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Extensibility.LogFormatter.FileLogFormatter.Order">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Extensibility.LogFormatter.FileLogFormatter.FormatLog(ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.BaseRequestExecuter">
+            <summary>
+            Base class to expose functionality to execute a function (request) with statistics measuring.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.BaseRequestExecuter.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Action{System.Exception},ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter)">
+            <inheritdoc />
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter">
+            <summary>
+            Invokes given func with retry strategy and exponential delay between attempts.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter"/>.
+            </summary>
+            <param name="maxRetryAttempts">Maximum number of attempts.</param>
+            <param name="baseIndex">Exponential base index for delay.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter.#ctor(System.Int32,System.Int32,ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter"/>.
+            </summary>
+            <param name="maxRetryAttempts">Maximum number of attempts.</param>
+            <param name="baseIndex">Exponential base index for delay.</param>
+            <param name="throttler">Limits concurrent execution of requests.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter.MaxRetryAttemps">
+            <summary>
+            Maximum number of attempts
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter.BaseIndex">
+            <summary>
+            Exponential base index for delay
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.ExponentialRetryRequestExecuter.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Action{System.Exception},ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.IRequestExecuter">
+            <summary>
+            Delegate to invoke any Func.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.IRequestExecuter.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Action{System.Exception},ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter)">
+            <summary>
+            Executes func.
+            </summary>
+            <param name="func">Function for execution.</param>
+            <param name="beforeNextAttemptCallback">Callback action to be invoked between attempts.</param>
+            <param name="statisticsCounter">Statistics counter to capture requests duration.</param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.IRequestExecuterFactory">
+            <summary>
+            Creates instances of <see cref="T:ReportPortal.Shared.Internal.Delegating.IRequestExecuter"/> based on <see cref="T:ReportPortal.Shared.Configuration.IConfiguration"/>
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.IRequestExecuterFactory.Create">
+            <summary>
+            Creates request executer.
+            </summary>
+            <returns>An instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.IRequestExecuter"/></returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottleFactory">
+            <summary>
+            Creates instances of <see cref="T:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler"/>.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottleFactory.Create">
+            <summary>
+            Create an instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler"/>
+            </summary>
+            <returns>Execution throttler.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler">
+            <summary>
+            Throttling execution of requests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler.MaxCapacity">
+            <summary>
+            Maximum allowed concurrent executers.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler.ReserveAsync">
+            <summary>
+            Waits until request can be executed.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler.Release">
+            <summary>
+            Release one busy executer.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter">
+            <summary>
+            Invokes given func with retry strategy and linear delay between attempts.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter"/>.
+            </summary>
+            <param name="maxRetryAttempts">Maximum number of attempts.</param>
+            <param name="delay">Delay between ateempts (in milliseconds).</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter.#ctor(System.Int32,System.Int32,ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter"/>.
+            </summary>
+            <param name="maxRetryAttempts">Maximum number of attempts.</param>
+            <param name="delay">Delay between ateempts (in milliseconds).</param>
+            <param name="throttler">Limits concurrent execution of requests.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter.MaxRetryAttemps">
+            <summary>
+            Maximum number of attempts
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter.Delay">
+            <summary>
+            How many milliseconds to wait between attempts
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.LinearRetryRequestExecuter.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Action{System.Exception},ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.NoneRetryRequestExecuter">
+            <summary>
+            Invokes given func.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.NoneRetryRequestExecuter.#ctor(ReportPortal.Shared.Internal.Delegating.IRequestExecutionThrottler)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.NoneRetryRequestExecuter"/>.
+            </summary>
+            <param name="throttler">Limits concurrent execution of requests.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.NoneRetryRequestExecuter.ExecuteAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Action{System.Exception},ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.RequestExecuterFactory">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecuterFactory.#ctor(ReportPortal.Shared.Configuration.IConfiguration)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.RequestExecuterFactory"/>
+            </summary>
+            <param name="configuration">Configuration object for considering when structs new <see cref="T:ReportPortal.Shared.Internal.Delegating.IRequestExecuter"/> instance.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecuterFactory.Create">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottleFactory">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottleFactory.#ctor(ReportPortal.Shared.Configuration.IConfiguration)">
+            <summary>
+            Initialize an instance with incoming configuration.
+            </summary>
+            <param name="configuration">Configuration for considering to create an instance.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottleFactory.Create">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler.#ctor(System.Int32)">
+            <summary>
+            Initializes new instance of <see cref="T:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler"/>
+            </summary>
+            <param name="maxConcurrentRequests">Limit maximum number of concurrent requests.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler.MaxCapacity">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler.ReserveAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler.Release">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Delegating.RequestExecutionThrottler.Dispose">
+            <summary>
+            Releases all resources used by RequestExecutionThrottler.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Logging.ITraceLogger">
+            <summary>
+            Interface to write internal log messages to file
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.ITraceLogger.Info(System.String)">
+            <summary>
+            Writes log message with "Info" level.
+            </summary>
+            <param name="message">Your internal log message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.ITraceLogger.Verbose(System.String)">
+            <summary>
+            Writes log message with "Verbose" level.
+            </summary>
+            <param name="message">Your internal log message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.ITraceLogger.Warn(System.String)">
+            <summary>
+            Writes log message with "Warning" level.
+            </summary>
+            <param name="message">Your internal log message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.ITraceLogger.Error(System.String)">
+            <summary>
+            Writes log message with "Error" level.
+            </summary>
+            <param name="message">Your internal log message</param>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Logging.TraceLogger">
+            <inheritdoc/>
+        </member>
+        <member name="T:ReportPortal.Shared.Internal.Logging.TraceLogManager">
+            <summary>
+            Class to manage all internal loggers.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Internal.Logging.TraceLogManager.Instance">
+            <summary>
+            Returns single instance of <see cref="T:ReportPortal.Shared.Internal.Logging.TraceLogManager"/>
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.TraceLogManager.WithBaseDir(System.String)">
+            <summary>
+            Fluently sets BaseDir.
+            </summary>
+            <param name="baseDir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.TraceLogManager.GetLogger(System.Type)">
+            <summary>
+            Gets or creates new logger for requested type.
+            </summary>
+            <param name="type">Type where logger should be registered for</param>
+            <returns><see cref="T:ReportPortal.Shared.Internal.Logging.ITraceLogger"/> instance for logging internal messages</returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Internal.Logging.TraceLogManager.GetLogger``1">
+            <summary>
+            Gets or creates new logger for requested type.
+            </summary>
+            <typeparam name="T">Type where logger should be registered for</typeparam>
+            <returns><see cref="T:ReportPortal.Shared.Internal.Logging.ITraceLogger"/> instance for logging internal messages</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Log">
+            <summary>
+            Attach artifacts to current test context like textual messages or binary files.
+            </summary>
+            <example>
+            Usage:
+            - sends simple message
+            <code>Log.Info("simple message")</code>
+            - send image to report
+            <code>Log.Debug("my screenshot", "image/png", File.ReadAllBytes(file_path))</code>
+            </example>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.BeginScope(System.String)">
+            <summary>
+            Begins new logged scope aka nested step.
+            </summary>
+            <param name="name">Logical operation name.</param>
+            <returns></returns>
+        </member>
+        <member name="P:ReportPortal.Shared.Log.RootScope">
+            <summary>
+            Returns an instance of rooted scope which you can use to log massages, instead of active scope.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Log.ActiveScope">
+            <summary>
+            Returns an instance of active scope where your code is running.
+            This scope is used by all methods by default like <see cref="M:ReportPortal.Shared.Log.Info(System.String)"/> or <see cref="M:ReportPortal.Shared.Log.Debug(System.String,System.String,System.Byte[])"/>.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Message(ReportPortal.Client.Abstractions.Requests.CreateLogItemRequest)">
+            <summary>
+            Sends log message to current test context.
+            </summary>
+            <param name="logRequest">Full model object for message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Info(System.String)">
+            <summary>
+            Sends log message with "Info" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Info(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Debug(System.String)">
+            <summary>
+            Sends log message with "Debug" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Debug(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Trace(System.String)">
+            <summary>
+            Sends log message with "Trace" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Trace(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Error(System.String)">
+            <summary>
+            Sends log message with "Error" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Error(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Fatal(System.String)">
+            <summary>
+            Sends log message with "Fatal" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Fatal(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Warn(System.String)">
+            <summary>
+            Sends log message with "Warn" level to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Log.Warn(System.String,System.String,System.Byte[])">
+            <summary>
+            Sends binary content to current test context.
+            </summary>
+            <param name="message">Text of the message</param>
+            <param name="mimeType">Mime type of content</param>
+            <param name="content">Array of bytes</param>
+        </member>
+        <member name="T:ReportPortal.Shared.MimeTypes.MimeTypeMap">
+            <summary>
+            Maps file extension to mime type.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.MimeTypes.MimeTypeMap.GetMimeType(System.String)">
+            <summary>
+            Tries to map file extension to mime type.
+            </summary>
+            <param name="extension">File extension.</param>
+            <returns>Mime type. "application/octet-stream" will be returned for unknown files.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Http.ClientServiceBuilder">
+            <summary>
+            Builder for <see cref="T:ReportPortal.Client.Abstractions.IClientService"/> instance with configuration.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.ClientServiceBuilder.#ctor(ReportPortal.Shared.Configuration.IConfiguration)">
+            <summary>
+            Constructor to create an instance of <see cref="T:ReportPortal.Shared.Reporter.Http.ClientServiceBuilder"/> class.
+            </summary>
+            <param name="configuration">Well known list of properties.</param>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.ClientServiceBuilder.UseHttpClientHandlerFactory(ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory)">
+            <summary>
+            Sets <see cref="T:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory"/> instance to be used for building Web API client.
+            </summary>
+            <param name="httpClientHandlerFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.ClientServiceBuilder.UseHttpClientFactory(ReportPortal.Shared.Reporter.Http.HttpClientFactory)">
+            <summary>
+            Sets <see cref="T:ReportPortal.Shared.Reporter.Http.HttpClientFactory"/> instance to be used for building Web API client.
+            </summary>
+            <param name="httpClientFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.ClientServiceBuilder.Build">
+            <summary>
+            Parses configuration and builds an instance of <see cref="T:ReportPortal.Client.Abstractions.IClientService"/>.
+            </summary>
+            <returns>Client to interact with Web API.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Http.HttpClientFactory">
+            <summary>
+            Class to create <see cref="T:System.Net.Http.HttpClient"/> instance based on <see cref="T:ReportPortal.Shared.Configuration.IConfiguration"/> object.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.HttpClientFactory.#ctor(ReportPortal.Shared.Configuration.IConfiguration,System.Net.Http.HttpClientHandler)">
+            <summary>
+            Creates an instance of <see cref="T:ReportPortal.Shared.Reporter.Http.HttpClientFactory"/> class.
+            </summary>
+            <param name="configuration">Flatten configuration values.</param>
+            <param name="httpClientHandler">Inner <see cref="P:ReportPortal.Shared.Reporter.Http.HttpClientFactory.HttpClientHandler"/> to use by <see cref="T:System.Net.Http.HttpClient"/>.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Http.HttpClientFactory.Configuration">
+            <summary>
+            Flatten configuration values.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Http.HttpClientFactory.HttpClientHandler">
+            <summary>
+            Inner http client handler to use.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.HttpClientFactory.Create">
+            <summary>
+            Parses all well known configuration values and returns new instance of <see cref="T:System.Net.Http.HttpClient"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.HttpClientFactory.GetTimeout">
+            <summary>
+            Parses timeout in configuration (in seconds).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory">
+            <summary>
+            Class to create <see cref="T:System.Net.Http.HttpClientHandler"/> instance based on <see cref="T:ReportPortal.Shared.Configuration.IConfiguration"/> object.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory.#ctor(ReportPortal.Shared.Configuration.IConfiguration)">
+            <summary>
+            Creates an instance of <see cref="T:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory"/> class.
+            </summary>
+            <param name="configuration">Flatten configuration values.</param>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory.Configuration">
+            <summary>
+            Flatten configuration values.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory.Create">
+            <summary>
+            Parses all well known configuration values and returns new instance of <see cref="T:System.Net.Http.HttpClientHandler"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Http.HttpClientHandlerFactory.GetProxy">
+            <summary>
+            Identify whether proxy is configured.
+            </summary>
+            <returns>Object of <see cref="T:System.Net.IWebProxy"/>. Null if proxy is not configured.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Statistics.ILaunchStatisticsCounter">
+            <summary>
+            Meta-interface to capture statistics about requests execution durations.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.ILaunchStatisticsCounter.StartTestItemStatisticsCounter">
+            <summary>
+            Returns statistics about StartTestItem requests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.ILaunchStatisticsCounter.FinishTestItemStatisticsCounter">
+            <summary>
+            Returns statistics about FinishTestItem requests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.ILaunchStatisticsCounter.LogItemStatisticsCounter">
+            <summary>
+            Returns statistics about LogItem requests.
+            </summary>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter">
+            <summary>
+            Measuring of requests duration.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter.Min">
+            <summary>
+            Minimum duration of measured requests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter.Max">
+            <summary>
+            Maximum duration of measured requests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter.Avg">
+            <summary>
+            Average duration of measured requests.
+            </summary>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter.Count">
+            <summary>
+            Total count of measured requests.
+            </summary>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Statistics.IStatisticsCounter.Measure(System.TimeSpan)">
+            <summary>
+            Measure of request's duration in sequence.
+            </summary>
+            <param name="duration">Duration to be measured.</param>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Statistics.LaunchStatisticsCounter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.LaunchStatisticsCounter.StartTestItemStatisticsCounter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.LaunchStatisticsCounter.FinishTestItemStatisticsCounter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.LaunchStatisticsCounter.LogItemStatisticsCounter">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Statistics.LaunchStatisticsCounter.ToString">
+            <summary>
+            Returns a string that represents the statistics counter for launch.
+            </summary>
+            <returns>A string that represents the statistics counter.</returns>
+        </member>
+        <member name="T:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter.Min">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter.Max">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter.Avg">
+            <inheritdoc/>
+        </member>
+        <member name="P:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter.Count">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter.Measure(System.TimeSpan)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ReportPortal.Shared.Reporter.Statistics.StatisticsCounter.ToString">
+            <summary>
+            Returns a string that represents the statistics counter.
+            </summary>
+            <returns>A string that represents the statistics counter.</returns>
+        </member>
+    </members>
+</doc>

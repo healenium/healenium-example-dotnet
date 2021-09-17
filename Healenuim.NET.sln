@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{706F454E-FA3A-4175-BA50-D46FD803814E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0E8D54C1-F8EB-4890-99D4-42C1F9B6B084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healenuim.Selenium", "src\Healenuim.Selenium\Healenuim.Selenium.csproj", "{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healenium.Selenium.Tests", "tests\Healenium.Selenium.Tests\Healenium.Selenium.Tests.csproj", "{8C238C27-2458-4FEC-BAFE-93C90E20900E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healenium.SeleniumRP.Tests", "tests\Healenium.SeleniumRP.Tests\Healenium.SeleniumRP.Tests.csproj", "{FB018BD4-31B8-48C5-955E-81A809E89E6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{7CA5DD64-5853-454F-8701-1147D15093A8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Repository\healenium-example-maven\infra\docker-compose.yaml = ..\..\Repository\healenium-example-maven\infra\docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{570B5F3D-F668-4335-8223-18F4F4E069ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{6E5DD6D4-3973-42E5-A986-E5B9145523C1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\healenium-python\infra\db\sql\init.sql = ..\..\healenium-python\infra\db\sql\init.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C238C27-2458-4FEC-BAFE-93C90E20900E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C238C27-2458-4FEC-BAFE-93C90E20900E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C238C27-2458-4FEC-BAFE-93C90E20900E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C238C27-2458-4FEC-BAFE-93C90E20900E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB018BD4-31B8-48C5-955E-81A809E89E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB018BD4-31B8-48C5-955E-81A809E89E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB018BD4-31B8-48C5-955E-81A809E89E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB018BD4-31B8-48C5-955E-81A809E89E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5} = {706F454E-FA3A-4175-BA50-D46FD803814E}
+		{8C238C27-2458-4FEC-BAFE-93C90E20900E} = {0E8D54C1-F8EB-4890-99D4-42C1F9B6B084}
+		{FB018BD4-31B8-48C5-955E-81A809E89E6D} = {0E8D54C1-F8EB-4890-99D4-42C1F9B6B084}
+		{570B5F3D-F668-4335-8223-18F4F4E069ED} = {7CA5DD64-5853-454F-8701-1147D15093A8}
+		{6E5DD6D4-3973-42E5-A986-E5B9145523C1} = {570B5F3D-F668-4335-8223-18F4F4E069ED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F19F1059-E41C-4870-8DF8-7EAE7629CF69}
+	EndGlobalSection
+EndGlobal
