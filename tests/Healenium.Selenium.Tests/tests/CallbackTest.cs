@@ -6,6 +6,7 @@ namespace Healenium.Selenium.Tests.tests
     public class CallbackTest : BaseTest
     {
         [Test]
+        //[Ignore(reason:"Firefox driver open issue with shadow root")]
         [Description("Update locator for element from shadow root")]
         public void TestElementFromShadowRoot()
         {
@@ -16,7 +17,8 @@ namespace Healenium.Selenium.Tests.tests
                     .VerifyShadowElement();
             Assert.IsTrue(result, "Element in shadowRoot enabled");
 
-
+            //opened issue with shadow root
+            //for mozilla OpenQA.Selenium.WebDriverException : Cyclic object value
             result = callbackTestPage
                     .ClickUpdateSquareButton()
                     .VerifyShadowElement(); //should be healed
@@ -36,9 +38,6 @@ namespace Healenium.Selenium.Tests.tests
                 .VerifySquareElement();
             Assert.IsTrue(result, "Element with css enabled");
 
-
-            //opened issue with shadow root
-            //for mozilla OpenQA.Selenium.WebDriverException : Cyclic object value
             result = callbackTestPage
                     .ClickUpdateSquareButton()
                     .VerifySquareElement(); //should be healed

@@ -12,6 +12,9 @@ namespace Healenuim.Selenium.pages
         By _checkboxAccount = By.XPath("//*[@class='checkbox checkbox_size_m checkbox_theme_alfa-on-white']");
         By _textFirstSelect = By.XPath("(//*[text()='Select Account'])[1]");
 
+        By _firstCheckboxChecked = By.XPath("//*[text()='Current account']//parent::label[contains(@class,'checked')]");
+
+
         public MainPage(IWebDriver driver) : base(driver) { }
 
         public MainPage Open()
@@ -62,14 +65,28 @@ namespace Healenuim.Selenium.pages
             }
         }
 
-        public void SelectFirstCheckbox()
-        {
-            _driver.FindElement(_checkboxAccount).Click();
-        }
+        public void SelectFirstCheckbox() => _driver.FindElement(_checkboxAccount).Click();
 
         public bool VerifyFirstCheckbox()
         {
             return _driver.FindElement(_checkboxAccount).Enabled;
         }
+
+        public void SelectAllCheckboxes()
+        {
+            var checkboxes = _driver.FindElements(_checkboxAccount).ToList();
+            checkboxes.ForEach(c => c.Click());
+        }
+
+        public bool VerifyFirstAccountCheckbox()
+        {
+            return _driver.FindElement(_firstCheckboxChecked).Enabled;
+        }
+
+        public void SelectFirstAccountCheckbox()
+        {
+            _driver.FindElement(_firstCheckboxChecked).Click();
+        }
+
     }
 }

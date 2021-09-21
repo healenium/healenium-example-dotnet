@@ -40,6 +40,7 @@ namespace Healenium.SeleniumRP.Tests.tests
         }
 
         [Test]
+        [Ignore(reason:"not implemented")]
         [Description("Button click with disable healing")]
         public void TestButtonClickWithDisableHealing()
         {
@@ -65,10 +66,8 @@ namespace Healenium.SeleniumRP.Tests.tests
             while (!mainPage.DisplayedText())
                 mainPage.GenerateMarkup();
 
-            for (int i = 0; i <= 10; i++)
-            {
-                mainPage.SelectFirstCheckbox();
-            }
+            mainPage.SelectAllCheckboxes(); //find via findElements
+
             bool result = mainPage.VerifyFirstCheckbox();  //should be healed
             Assert.IsTrue(result, "Locator for checkbox with findElements has been healed");
         }
@@ -91,6 +90,26 @@ namespace Healenium.SeleniumRP.Tests.tests
                 mainPage.ClickTestGeneratedButton();//should be healed
                 mainPage.GenerateMarkup();
             }
+        }
+
+        [Test]
+        [Description("Select first checkbox and verify using parent:: function in Xpath")]
+        public void TestCheckboxesParentXpath()
+        {
+            MainPage mainPage = new MainPage(_driver);
+            mainPage.Open()
+                    .GenerateMarkup();
+
+            while (!mainPage.DisplayedText())
+                mainPage.GenerateMarkup();
+
+            mainPage.SelectFirstCheckbox();
+            bool result = mainPage.VerifyFirstAccountCheckbox();
+            Assert.IsTrue(result, "Verify first account checkbox checked");
+
+            mainPage.SelectFirstAccountCheckbox();
+            result = mainPage.VerifyFirstAccountCheckbox(); //should be healed
+            Assert.IsTrue(result, "Verify first account checkbox unchecked");
         }
     }
 }
