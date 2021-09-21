@@ -6,7 +6,7 @@ namespace Healenium.SeleniumRP.Tests.tests
     public class CallbackTest : BaseTest
     {
         [Test]
-        //[Ignore(reason: "Firefox driver open issue with shadow root")]
+        [Ignore(reason: "Firefox driver open issue with shadow root")]
         [Description("Update locator for element from shadow root")]
         public void TestElementFromShadowRoot()
         {

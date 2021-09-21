@@ -15,12 +15,12 @@ namespace Healenium.Selenium.Tests.tests
         [Obsolete]
         public static void SetUp()
         {
-            var optionsChrome = new ChromeOptions();
-            optionsChrome.AddArguments("--no-sandbox");
-            _driver = new RemoteWebDriver(new Uri("http://localhost:8085"), optionsChrome);
+            //var optionsChrome = new ChromeOptions();
+            //optionsChrome.AddArguments("--no-sandbox");
+            //_driver = new RemoteWebDriver(new Uri("http://localhost:8085"), optionsChrome);
 
-            //var options = new FirefoxOptions();
-            //_driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub/"), options);
+            var options = new FirefoxOptions();
+            _driver = new RemoteWebDriver(new Uri("http://localhost:8085"), options);
         }
 
         [TearDown]
