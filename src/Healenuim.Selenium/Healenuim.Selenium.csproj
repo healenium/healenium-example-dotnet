@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\packages\NUnit.3.13.2\build\NUnit.props" Condition="Exists('..\..\packages\NUnit.3.13.2\build\NUnit.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -49,22 +49,71 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\packages\Selenium.WebDriver.4.1.1\lib\net48\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\packages\Selenium.Support.4.1.1\lib\net48\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\packages\Autofac.6.3.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extensions.DependencyInjection">
+      <HintPath>..\..\packages\Autofac.Extensions.DependencyInjection.7.2.0\lib\netstandard2.0\Autofac.Extensions.DependencyInjection.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="pages\BasePage.cs" />
     <Compile Include="pages\CallbackTestPage.cs" />
     <Compile Include="pages\MainPage.cs" />
-    <Compile Include="pages\MainPageWithFindBy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pages\TestEnvPage.cs" />
+    <Compile Include="constants\LocatorType.cs" />
+    <Compile Include="search\Context.cs" />
+    <Compile Include="search\Strategy.cs" />
+    <Compile Include="search\locators\XPathStrategy.cs" />
+    <Compile Include="search\locators\CssStrategy.cs" />
+    <Compile Include="search\locators\IdStrategy.cs" />
+    <Compile Include="search\locators\ClassNameStrategy.cs" />
+    <Compile Include="search\locators\LinkTextStrategy.cs" />
+    <Compile Include="search\locators\PartialLinkStrategy.cs" />
+    <Compile Include="search\locators\TagStrategy.cs" />
+    <Compile Include="search\locators\NameStrategy.cs" />
+    <Compile Include="constants\PageUrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="constants\" />
+    <Folder Include="search\" />
+    <Folder Include="search\locators\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -72,7 +121,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\NUnit.3.13.2\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NUnit.3.13.2\build\NUnit.props'))" />
-    <Error Condition="!Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.10700\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.10700\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.10700\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.10700\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.101.0.4951.4100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.101.0.4951.4100\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>

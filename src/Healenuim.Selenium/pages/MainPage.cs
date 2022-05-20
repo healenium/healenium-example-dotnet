@@ -1,92 +1,61 @@
-﻿using OpenQA.Selenium;
+﻿using Healenuim.Selenium.constants;
+using OpenQA.Selenium;
+using System;
 using System.Linq;
 
 namespace Healenuim.Selenium.pages
 {
-    public class MainPage : BasePage
+    public interface IMainPage
     {
-        By _generateMarkupBtnId = By.Id("markup-generation-button");
-        By _testButton = By.ClassName("default-btn");
-        By _testGeneratedButton = By.Id("random-id");
+        IMainPage ClickTestButtonWaitor(int seconds);
+        IMainPage OpenPage();
+        IMainPage GenerateMarkup();
+        IMainPage ClickTestButton();
+        IMainPage ClickTestGeneratedButton();
+        void ConfirmAlert();
+    }
 
-        By _checkboxAccount = By.XPath("//*[@class='checkbox checkbox_size_m checkbox_theme_alfa-on-white']");
-        By _textFirstSelect = By.XPath("(//*[text()='Select Account'])[1]");
+    public class MainPage : BasePage, IMainPage
+    {
+        private By _generateMarkupBtnId = By.Id("markup-generation-button");
+        private By _testButton = By.ClassName("default-btn");
+        private By _testGeneratedButton = By.Id("random-id");
 
-        By _firstCheckboxChecked = By.XPath("//*[text()='Current account']//parent::label[contains(@class,'checked')]");
-
+        public IMainPage ClickTestButtonWaitor(int seconds)
+        {
+            throw new NotImplementedException();
+        }
 
         public MainPage(IWebDriver driver) : base(driver) { }
 
-        public MainPage Open()
+        public IMainPage OpenPage()
         {
-            _driver.Navigate().GoToUrl(_mainPageUrl);
+            Driver.Navigate().GoToUrl(PageUrl.MarkupUrl);
             return this;
         }
 
-        public MainPage GenerateMarkup()
+        public IMainPage GenerateMarkup()
         {
-            _driver.FindElement(_generateMarkupBtnId).Click();
+            Driver.FindElement(_generateMarkupBtnId).Click();
             return this;
         }
 
-        public MainPage ClickTestButton()
+        public IMainPage ClickTestButton()
         {
-            _driver.FindElement(_testButton).Click();
+            Driver.FindElement(_testButton).Click();
             return this;
         }
 
-        public MainPage ClickTestGeneratedButton()
+        public IMainPage ClickTestGeneratedButton()
         {
-            _driver.FindElement(_testGeneratedButton).Click();
+            Driver.FindElement(_testGeneratedButton).Click();
             return this;
         }
 
-        public bool TestButtonEnable()
+        public void ConfirmAlert()
         {
-            try
-            {
-                return _driver.FindElement(_testGeneratedButton).Enabled;
-            }
-            catch (System.NullReferenceException)
-            {
-                return false;
-            }
+            IAlert alert = Driver.SwitchTo().Alert();
+            alert.Accept();
         }
-
-        public bool DisplayedText()
-        {
-            try
-            {
-                return _driver.FindElement(_textFirstSelect).Enabled;
-            }
-            catch (System.NullReferenceException)
-            {
-                return false;
-            }
-        }
-
-        public void SelectFirstCheckbox() => _driver.FindElement(_checkboxAccount).Click();
-
-        public bool VerifyFirstCheckbox()
-        {
-            return _driver.FindElement(_checkboxAccount).Enabled;
-        }
-
-        public void SelectAllCheckboxes()
-        {
-            var checkboxes = _driver.FindElements(_checkboxAccount).ToList();
-            checkboxes.ForEach(c => c.Click());
-        }
-
-        public bool VerifyFirstAccountCheckbox()
-        {
-            return _driver.FindElement(_firstCheckboxChecked).Enabled;
-        }
-
-        public void SelectFirstAccountCheckbox()
-        {
-            _driver.FindElement(_firstCheckboxChecked).Click();
-        }
-
     }
 }

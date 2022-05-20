@@ -1,54 +1,54 @@
-﻿using OpenQA.Selenium;
+﻿using Healenuim.Selenium.constants;
+using OpenQA.Selenium;
 
 namespace Healenuim.Selenium.pages
 {
-    public class CallbackTestPage : BasePage
+    public interface ICallbackPage
     {
-        By _addSquareButton = By.XPath("//button[contains(@class, 'add')]");
-        By _updateSquareButton = By.XPath("//button[contains(@class, 'update')]");
-        By _removeSquareButton = By.XPath("//button[contains(@class, 'remove')]");
+        ICallbackPage OpenPage();
+        bool VerifySquareElement();
+        ICallbackPage ClickAddSquareButton();
+        ICallbackPage ClickUpdateSquareButton();
+        ICallbackPage ClickRemoveSquareButton();
+    }
 
-        By _testButton = By.XPath("//custom-square[contains(@c, 'red')]");
-        By _testButtonCss = By.CssSelector("[c='red']");
+    public class CallbackTestPage : BasePage, ICallbackPage
+    {
+        private By _addSquareButton = By.XPath("//button[contains(@class, 'add')]");
+        private By _updateSquareButton = By.XPath("//button[contains(@class, 'update')]");
+        private By _removeSquareButton = By.XPath("//button[contains(@class, 'remove')]");
+
+        private By _testButtonCss = By.CssSelector("[c='red']");
 
         public CallbackTestPage(IWebDriver driver) : base(driver) { }
 
-        public CallbackTestPage Open()
+        public ICallbackPage OpenPage()
         {
-            _driver.Navigate().GoToUrl(_callbackTestPageUrl);
+            Driver.Navigate().GoToUrl(PageUrl.CallbackUrl.ToString());
             return this;
         }
-
-        public bool VerifyShadowElement() => GetTestButton().Enabled;
 
         public bool VerifySquareElement()
         {
-            return _driver.FindElement(_testButtonCss).Enabled;
+            return Driver.FindElement(_testButtonCss).Enabled;
         }
 
-        public CallbackTestPage ClickAddSquareButton()
+        public ICallbackPage ClickAddSquareButton()
         {
-            _driver.FindElement(_addSquareButton).Click();
+            Driver.FindElement(_addSquareButton).Click();
             return this;
         }
 
-        public CallbackTestPage ClickUpdateSquareButton()
+        public ICallbackPage ClickUpdateSquareButton()
         {
-            _driver.FindElement(_updateSquareButton).Click();
+            Driver.FindElement(_updateSquareButton).Click();
             return this;
         }
 
-        public CallbackTestPage ClickRemoveSquareButton()
+        public ICallbackPage ClickRemoveSquareButton()
         {
-            _driver.FindElement(_removeSquareButton).Click();
+            Driver.FindElement(_removeSquareButton).Click();
             return this;
-        }
-
-        private IWebElement GetTestButton()
-        {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
-            IWebElement shadowRoot = _driver.FindElement(_testButton);
-            return (IWebElement)js.ExecuteScript("return arguments[0].shadowRoot", shadowRoot);
         }
     }
 }
