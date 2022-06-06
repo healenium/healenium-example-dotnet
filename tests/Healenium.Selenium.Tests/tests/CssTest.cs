@@ -16,13 +16,13 @@ namespace Healenium.Selenium.Tests.tests
                     .VerifySquareElement();
             Assert.IsTrue(result, "Element with css enabled");
 
-            //for (int i = 0; i <= 2; i++)
-            //{
-            //    result = _callbackPage
-            //            .ClickUpdateSquareButton()
-            //            .VerifySquareElement(); //should be healed
-            //    Assert.IsTrue(result, "Element with css was healed");
-            //}
+            for (int i = 0; i <= 2; i++)
+            {
+                result = _callbackPage
+                        .ClickUpdateSquareButton()
+                        .VerifySquareElement(); //should be healed
+                Assert.IsTrue(result, "Element with css was healed");
+            }
         }
 
         [Test]
@@ -31,8 +31,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                      .FindTestElement(LocatorType.Css, "#change_id")
-                     .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, "#change_id");
+                     .ClickSubmitButton()
+                     .FindTestElement(LocatorType.Css, "#change_id");
         }
 
         [Test]
@@ -41,8 +41,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                     .FindTestElement(LocatorType.Css, "input#change\\:name")
-                    .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, "input#change\\:name");
+                    .ClickSubmitButton()
+                    .FindTestElement(LocatorType.Css, "input#change\\:name");
         }
 
         [Test]
@@ -51,8 +51,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                     .FindTestElement(LocatorType.Css, "test_tag")
-                    .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, "test_tag");
+                    .ClickSubmitButton()
+                    .FindTestElement(LocatorType.Css, "test_tag");
         }
 
         [Test]
@@ -61,8 +61,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                     .FindTestElement(LocatorType.Css, "input:disabled")
-                    .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, "input:disabled");
+                    .ClickSubmitButton()
+                    .FindTestElement(LocatorType.Css, "input:disabled");
         }
 
         [Test]
@@ -71,8 +71,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                     .FindTestElement(LocatorType.Css, "textarea:enabled")
-                    .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, "textarea:enabled");
+                    .ClickSubmitButton()
+                    .FindTestElement(LocatorType.Css, "textarea:enabled");
         }
 
         [Test]
@@ -81,8 +81,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                     .FindTestElement(LocatorType.Css, "input:checked")
-                    .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, "input:checked");
+                    .ClickSubmitButton()
+                    .FindTestElement(LocatorType.Css, "input:checked");
         }
 
         [Test]
@@ -98,8 +98,8 @@ namespace Healenium.Selenium.Tests.tests
         {
             _testEnvPage.OpenPage()
                     .FindTestElement(LocatorType.Css, ".test_class")
-                    .ClickSubmitButton();
-            //.FindTestElement(LocatorType.Css, ".test_class");
+                    .ClickSubmitButton()
+                    .FindTestElement(LocatorType.Css, ".test_class");
         }
     }
 }
