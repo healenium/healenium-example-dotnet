@@ -5,41 +5,67 @@
 ### 1.Start Healenium backend from 'infra' folder
 
 ```cd infra```
+To work with Healenium and Selenoid plus Selenoid Ui, use:
+<pre>
+    <b>docker-compose up -d</b>
 
-```docker-compose up -d```
-or
-```docker-compose -f docker-compose-selenium-v3.yaml up -d```
+    To download docker-compose.yaml file into your project use this command:
 
-To download this file into your project use this command:
+    <b>$ curl https://raw.githubusercontent.com/healenium/healenium-example-dotnet/master/infra/docker-compose.yaml -o docker-compose.yaml</b>
+</pre>
+To work with Healenium and standard Selenium hub with nodes, use:
+<pre>
+    <b>docker-compose -f docker-compose-selenium-v3.yaml up -d</b>
 
-```$ curl https://raw.githubusercontent.com/healenium/healenium-example-dotnet/master/infra/docker-compose.yml -o docker-compose.yml```
+    To download docker-compose-selenium-v3.yaml file into your project use this command:
 
-Create /db/sql folder on the same level in your project. Add init.sql file into ```./db/sql/init.sql``` folder in your project via command:
+    <b>$ curl https://raw.githubusercontent.com/healenium/healenium-example-python/master/infra/docker-compose-selenium-v3.yaml -o docker-compose-selenium-v3.yaml</b>
+</pre>
+Create <b>/db/sql</b> folder on the same level in your project.
+<pre>
+    Add init.sql file into ./db/sql/init.sql folder in your project via command:
 
-```$ curl https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql -o init.sql```
-
-Verify that images ```healenium/hlm-backend:3.2.2```, ```postgres:14.2-bullseye```, ```healenium/hlm-selector-imitator```, ```healenium/hlm-selenoid``` and ```healenium/hlm-proxy:0.2.5.2``` are up and running
-
+    <b>$ curl https://raw.githubusercontent.com/healenium/healenium/master/db/sql/init.sql -o init.sql</b>
+</pre>
+Verify the next images are <b>Up</b> and <b>Running</b>
+<pre>
+    * postgres:14.2-bullseye
+    * healenium/hlm-backend:3.2.3
+    * healenium/hlm-selector-imitator:1.1
+    * healenium/hlm-proxy:1.0.0
+    * healenium/hlm-selenoid:0.1.0
+    * aerokube/selenoid-ui:1.10.5
+</pre>
 ### 2. Project structure
 ```
 |__Healenium.NET solution
-   |__src
-      |__Healenium.Selenium
-         |__pages
-   |__tests
-      |__Healenium.Selenium.Tests
-         |__tests
-            |__selenium tests
-      |__Healenium.SeleniumRP.Tests
-         |__tests
-            |__selenium RP tests
-         |__ReportPortal.config.json
-      |__Healenium.Selenoid.Tests
-         |__tests
-            |__selenoid tests
-   |__infra
-      |__docker-compose.yml
-
+    |__infra
+        |__db
+            |__sql
+                |__init.sql
+        |__docker-compose.yaml
+        |__docker-compose-selenium-v3.yaml
+    |__src
+        |__Healenium.Selenium
+            |__constants
+            |__pages
+            |__Properties
+            |__search
+            |__Healenium.Selenium.csproj
+            |__packages.config
+    |__tests
+        |__Healenium.Selenium.Tests
+            |__Properties
+            |__tests
+            |__Healenium.Selenium.Tests.csproj
+            |__packages.config
+        |__Healenium.SeleniumRP.Tests
+            |__Properties
+            |__tests
+            |__app.config
+            |__Healenium.SeleniumRP.Tests.csproj
+            |__packages.config
+            |__ReportPortal.config.json
 ``` 
 			   
 ### 3.Run test
@@ -58,5 +84,7 @@ To run tests for specified test project in terminal with nunit3-console you need
 
 
 ### 4. Monitoring tests running
-You can monitor tests running
-To do this go to ```http://localhost:8080```
+You can monitor tests running if you using Healenium with Selenoid plus Selenoid Ui, use:
+<pre>
+    go to <b>http://localhost:8080</b>
+</pre>
