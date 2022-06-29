@@ -19,7 +19,7 @@ To work with Healenium and standard Selenium hub with nodes, use:
 
     To download docker-compose-selenium-v3.yaml file into your project use this command:
 
-    <b>$ curl https://raw.githubusercontent.com/healenium/healenium-example-python/master/infra/docker-compose-selenium-v3.yaml -o docker-compose-selenium-v3.yaml</b>
+    <b>$ curl https://raw.githubusercontent.com/healenium/healenium-example-dotnet/master/infra/docker-compose-selenium-v3.yaml -o docker-compose-selenium-v3.yaml</b>
 </pre>
 Create <b>/db/sql</b> folder on the same level in your project.
 <pre>
