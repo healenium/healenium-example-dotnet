@@ -38,7 +38,7 @@ Verify the next images are <b>Up</b> and <b>Running</b>
 </pre>
 ### 2. Project structure
 ```
-|__Healenium.NET solution
+|__healenium-example-dotnet (root)
     |__infra
         |__db
             |__sql
