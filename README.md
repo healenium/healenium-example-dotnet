@@ -1,10 +1,11 @@
 # healenium
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)<br/>
 .NET + NUnit + MSBuild project with healenium usage example 
 
 ## How to start
 ### 1.Start Healenium backend from 'infra' folder
+```cd infra```<br/><br/>
 
-```cd infra```
 To work with Healenium and Selenoid plus Selenoid Ui, use:
 <pre>
     <b>docker-compose up -d</b>
