@@ -112,7 +112,7 @@ To run tests for specified test project in terminal with nunit3-console you need
 >>>How to configure Report Portal with NUnit you can read here: https://github.com/reportportal/agent-net-nunit
 
 
-### 4. Monitoring tests running
+### 4.Monitoring tests running
 You can monitor tests running if you using Healenium with Selenoid plus Selenoid Ui, use:
 <pre>
     go to <b>http://localhost:8080</b>
