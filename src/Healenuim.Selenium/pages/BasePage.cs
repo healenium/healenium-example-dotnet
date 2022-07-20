@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Healenuim.Selenium.pages
+namespace Healenium.Selenium.pages
 {
     public class BasePage
     {

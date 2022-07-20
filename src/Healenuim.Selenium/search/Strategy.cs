@@ -1,4 +1,4 @@
-﻿namespace Healenuim.Selenium.search
+﻿namespace Healenium.Selenium.search
 {
     public interface Strategy
     {

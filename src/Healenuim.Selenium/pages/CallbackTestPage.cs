@@ -1,7 +1,7 @@
-﻿using Healenuim.Selenium.constants;
+﻿using Healenium.Selenium.constants;
 using OpenQA.Selenium;
 
-namespace Healenuim.Selenium.pages
+namespace Healenium.Selenium.pages
 {
     public interface ICallbackPage
     {

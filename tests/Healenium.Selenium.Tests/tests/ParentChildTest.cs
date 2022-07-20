@@ -1,4 +1,4 @@
-﻿using Healenuim.Selenium.constants;
+﻿using Healenium.Selenium.constants;
 using NUnit.Framework;
 
 namespace Healenium.Selenium.Tests.tests

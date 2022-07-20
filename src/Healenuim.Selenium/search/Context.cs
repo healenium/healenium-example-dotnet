@@ -1,9 +1,9 @@
 ﻿using System;
-using Healenuim.Selenium.constants;
-using Healenuim.Selenium.search.locators;
+using Healenium.Selenium.constants;
+using Healenium.Selenium.search.locators;
 using OpenQA.Selenium;
 
-namespace Healenuim.Selenium.search
+namespace Healenium.Selenium.search
 {
     public class Context
     {

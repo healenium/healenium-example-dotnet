@@ -1,9 +1,8 @@
-﻿using Healenuim.Selenium.constants;
+﻿using Healenium.Selenium.constants;
 using OpenQA.Selenium;
 using System;
-using System.Linq;
 
-namespace Healenuim.Selenium.pages
+namespace Healenium.Selenium.pages
 {
     public interface IMainPage
     {

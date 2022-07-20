@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using Healenuim.Selenium.constants;
-using Healenuim.Selenium.search;
+using Healenium.Selenium.constants;
+using Healenium.Selenium.search;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
-namespace Healenuim.Selenium.pages
+namespace Healenium.Selenium.pages
 {
     public interface ITestEnvPage
     {

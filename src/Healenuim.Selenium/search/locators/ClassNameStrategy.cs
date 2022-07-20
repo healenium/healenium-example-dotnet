@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Healenuim.Selenium.search.locators
+namespace Healenium.Selenium.search.locators
 {
     public class ClassNameStrategy : Strategy
     {

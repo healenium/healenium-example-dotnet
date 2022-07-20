@@ -1,4 +1,4 @@
-﻿namespace Healenuim.Selenium.constants
+﻿namespace Healenium.Selenium.constants
 {
     public class PageUrl
     {

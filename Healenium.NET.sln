@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{706F454E-FA3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0E8D54C1-F8EB-4890-99D4-42C1F9B6B084}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healenuim.Selenium", "src\Healenuim.Selenium\Healenuim.Selenium.csproj", "{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healenium.Selenium", "src\Healenuim.Selenium\Healenium.Selenium.csproj", "{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healenium.Selenium.Tests", "tests\Healenium.Selenium.Tests\Healenium.Selenium.Tests.csproj", "{8C238C27-2458-4FEC-BAFE-93C90E20900E}"
 EndProject

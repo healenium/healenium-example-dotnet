@@ -108,7 +108,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Healenuim.Selenium\Healenuim.Selenium.csproj">
       <Project>{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}</Project>
-      <Name>Healenuim.Selenium</Name>
+      <Name>Healenium.Selenium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Healenuim.Selenium\Healenium.Selenium.csproj">
+      <Project>{E6CA77FD-7E1D-4138-9A9C-7B6563A961E5}</Project>
+      <Name>Healenium.Selenium</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
