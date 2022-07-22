@@ -15,15 +15,15 @@ namespace Healenium.Selenium.Tests
                 .FindTestElement(LocatorType.Xpath, "(//*[@class='input1']//parent::*[contains(@class, 'input1')])[8]");
         }
 
-        [Test]
-        [Description("Select and verify several inputs via parent.findElement")]
-        public void TestUnderParentFindElements()
-        {
-            _testEnvPage.OpenPage()
-                .SelectCheckboxesUnderParent()
-                .ClickFormButton()
-                .SelectCheckboxesUnderParent();
-        }
+        //[Test]
+        //[Description("Select and verify several inputs via parent.findElement")]
+        //public void TestUnderParentFindElements()
+        //{
+        //    _testEnvPage.OpenPage()
+        //        .SelectCheckboxesUnderParent()
+        //        .ClickFormButton()
+        //        .SelectCheckboxesUnderParent();
+        //}
 
         [Test]
         [Description("Select and verify several inputs CSS FirstChild")]
@@ -45,18 +45,18 @@ namespace Healenium.Selenium.Tests
                     .FindTestElement(LocatorType.Css, "child_tag:last-child");
         }
 
-        [Test]
-        [Description("Select first checkbox and verify using parent.findElements in Xpath. " +
-            "The difference between first - not use @DisabledHealing")]
-        public void TestXPathUnderParentFindElements()
-        {
-            string parentXpath = "//*[contains(@class,'test-form')]";
-            string childXpath = "//*[@class='input1']";
-            _testEnvPage.OpenPage()
-                    .FindElementsUnderParent(parentXpath, childXpath)
-                    .ClickFormButton()
-                    .FindElementsUnderParent(parentXpath, childXpath);
-        }
+        //[Test]
+        //[Description("Select first checkbox and verify using parent.findElements in Xpath. " +
+        //    "The difference between first - not use @DisabledHealing")]
+        //public void TestXPathUnderParentFindElements()
+        //{
+        //    string parentXpath = "//*[contains(@class,'test-form')]";
+        //    string childXpath = "//*[@class='input1']";
+        //    _testEnvPage.OpenPage()
+        //            .FindElementsUnderParent(parentXpath, childXpath)
+        //            .ClickFormButton()
+        //            .FindElementsUnderParent(parentXpath, childXpath);
+        //}
         // selenium 4 (above, below, toLeftOf, toRightOf, near)
     }
 }
