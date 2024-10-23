@@ -19,7 +19,7 @@ namespace Healenium.Selenium.pages
         private By _updateSquareButton = By.XPath("//button[contains(@class, 'update')]");
         private By _removeSquareButton = By.XPath("//button[contains(@class, 'remove')]");
 
-        private By _testButtonCss = By.CssSelector("[c='red']");
+        private By _testButtonCss = By.CssSelector("[color='red']");
 
         public CallbackTestPage(IWebDriver driver) : base(driver) { }
 

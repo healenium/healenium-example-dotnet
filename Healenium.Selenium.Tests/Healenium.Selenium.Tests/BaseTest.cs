@@ -43,7 +43,7 @@ namespace Healenium.Selenium.Tests
         [TearDown]
         public static void AfterAll()
         {
-            _driver.Quit();
+            _driver?.Dispose();
         }
     }
 }

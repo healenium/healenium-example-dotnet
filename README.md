@@ -65,6 +65,14 @@ To run using Healenium create RemoteWebDriver with URL ```http://<remote webdriv
     _driver = new RemoteWebDriver(new Uri("http://localhost:8085"), optionsChrome);
 ```
 
+To temporarily disable the healing mechanism for certain sections of your code, use the following syntax:
+
+```java
+    IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor) Driver;
+    jsExecutor.ExecuteScript("disable_healing_true");
+   ... // Your code that does not require healing
+   jsExecutor.ExecuteScript("disable_healing_false");
+```
 
 ### 3. Run tests
 You can run tests via Test Explorer

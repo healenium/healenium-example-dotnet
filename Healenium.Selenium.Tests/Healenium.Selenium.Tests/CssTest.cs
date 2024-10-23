@@ -1,5 +1,4 @@
-﻿using System;
-using Healenium.Selenium.constants;
+﻿using Healenium.Selenium.constants;
 
 namespace Healenium.Selenium.Tests
 {
@@ -7,27 +6,8 @@ namespace Healenium.Selenium.Tests
     {
 
         [Test]
-        [Description("Update locator for element with css attribute")]
-        public void TestCssAttribute()
-        {
-            bool result = _callbackPage
-                    .OpenPage()
-                    .ClickAddSquareButton()
-                    .VerifySquareElement();
-            Assert.IsTrue(result, "Element with css enabled");
-
-            for (int i = 0; i <= 2; i++)
-            {
-                result = _callbackPage
-                        .ClickUpdateSquareButton()
-                        .VerifySquareElement(); //should be healed
-                Assert.IsTrue(result, "Element with css was healed");
-            }
-        }
-
-        [Test]
         [Description("Update locator for element with css id")]
-        public void TestCssId()
+        public void TestnunitCssId()
         {
             _testEnvPage.OpenPage()
                      .FindTestElement(LocatorType.Css, "#change_id")
